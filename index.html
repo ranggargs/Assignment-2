@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Kanban Board</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="images/x-icon" href="https://cdn-icons-png.flaticon.com/512/5260/5260005.png"/>
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
+  </head>
+  <body>
+    <div class="board">
+      <form id="todo-form">
+        <input type="text" placeholder="New TODO..." id="todo-input" />
+        <button type="submit">Add +</button>
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">TODO</h3>
+
+          <p class="task" draggable="true">Develop a new feature for the website.</p>
+          <p class="task" draggable="true">Fix the bug in the login system.</p>
+          <p class="task" draggable="true">Research and learn about the new JavaScript framework.</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Doing</h3>
+
+          <p class="task" draggable="true">Implement responsive design for the landing page.</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Done</h3>
+
+          <p class="task" draggable="true">
+            Completed the user registration flow.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
